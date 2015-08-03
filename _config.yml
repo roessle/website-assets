@@ -1,0 +1,3 @@
+baseurl: ""
+sass:
+    style: :expanded
