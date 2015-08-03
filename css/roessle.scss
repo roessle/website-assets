@@ -1,0 +1,32 @@
+.body {
+  background-attachment: scroll; /* Needed for cover hero background image on iOS (iPad) */
+}
+    
+.logo {
+  margin-left: 10px;
+  margin-bottom: -30px;
+}
+    
+.breadcrumb-float-outer-wrapper {
+  padding-left: 10px;
+}
+    
+.navigation-colors-bar {
+  background: url(http://assets.roessle.eu/images/backgrounds/bar.png);
+  background-color: #9d0525;
+  height: 20px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+    
+.navigation-colors {
+  background-color: #CAAC99;
+  padding-top: 27px;
+}
+    
+.navigation-colors a, .navigation-colors a:link, .navigation-colors a:visited {
+  text-transform: lowercase;
+}
