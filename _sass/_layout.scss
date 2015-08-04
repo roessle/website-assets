@@ -25,10 +25,12 @@
 .navigation-colors {
   background-color: #CAAC99;
   padding-top: 27px;
-}
-    
-.navigation-colors a, .navigation-colors a:link, .navigation-colors a:visited {
-  text-transform: lowercase;
+
+  a {
+    &, &:link, &:visited {
+      text-transform: lowercase;
+    }
+  }
 }
 
 // 
