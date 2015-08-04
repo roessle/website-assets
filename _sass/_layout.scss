@@ -25,9 +25,12 @@
 .navigation-colors {
   background-color: #CAAC99;
   padding-top: 27px;
+}
 
+.tpl-navigation-wrapper {
   a {
-    &, &:link, &:visited {
+    &:link, &:visited {
+      font-size: 17px;
       text-transform: lowercase;
     }
   }
