@@ -43,3 +43,15 @@
 // 
 // Page content
 // 
+
+.content-options-inner, .sidebar-options {
+  h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+  }
+  h1 {
+    a:link, a:visited {
+      text-transform: lowercase;
+    }
+  }
+}
+
