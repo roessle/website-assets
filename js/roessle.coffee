@@ -1,5 +1,3 @@
----
----
 
 $(document).ready ->
   # Add bar on top of navigation
