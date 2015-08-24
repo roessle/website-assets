@@ -1,0 +1,25 @@
+{
+  "name": "roessle-assets",
+  "version": "0.0.1",
+  "description": "Website assets for roessle.eu",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-jekyll": "~0.4.2",
+    "metalsmith": "~2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roessle/website-assets.git"
+  },
+  "author": "Fabian Stehle",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/roessle/website-assets/issues"
+  },
+  "homepage": "https://github.com/roessle/website-assets"
+}
