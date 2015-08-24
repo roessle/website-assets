@@ -1,5 +1,13 @@
-language: ruby
-rvm:
-  - 2.1
+language: node_js
+node_js:
+- '0.12'
+install:
+- npm install
+- bundle install
 script:
-  - bundle exec jekyll build
+- grunt build
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && grunt gh-pages:travis
+env:
+  global:
+  - secure: L2UoVj/QTMVDoi4XVmTwxbC1JfSOfD/cSCFS3nc7midgw1oA2XDfu5sgPbE4Jc8F/cDyY8POdW1mMTA3Y6PW4ldF8xY95bMWBLXHbBIohQHSJcArinDb1aRUkyv84GwBF0EV3RvjfKcIQLoiTH8pi3VjQUTbqGI6JqUc/DLqjrftna0tNRUU36E9vhaG3SZC+QKm7WwkTyfpFkv9HeoPJql77/rOeEasZg3adf6mgIprUATolVetnfBtVKnOYm3Kor41luF7Rx0p46I7O/Pbwh2xSkge46JkPt1l2cON1eNS1Iff6ynIsD+mKClrsnQOTIyxrbhhxt71c4gqAlfNgDEk2Qo0tXTkNevzQzCqCD3xGrj2Wi4pyJgiUILO7hezFpkrCaumqnKKn5MK24n41EshDEVCFsOIqSlIZasbqs+0+i1H0wXW5oLEvmxr0lsPClkJCOn0+UWvGiVa4x0kQIDlJ/JV3dXlJzFOZpFYNMFOesURb5qx08znavRFczZmf4xw93B988LvcsM5W/oSxl4A0g/ry7RZ10klS1hMJck7+95twQyzdZ5e76C2d/79vWAwxEgrdo1gGu3Nq3AU6Tx5+7yPSMMEIPZ16qctLaTjU9yCVGDQj2xwrds1NrLm82NItwWuYMxRGBWhCd7cx8kaggvDJLKJ1BgH6DKr/Mc=
