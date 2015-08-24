@@ -9,6 +9,7 @@
     "metalsmith": "~2.0.1"
   },
   "devDependencies": {
+    "grunt-cli": "~0.1.13",
     "grunt-contrib-sass": "~0.9.2",
     "grunt-contrib-coffee": "~0.13.0"
   },

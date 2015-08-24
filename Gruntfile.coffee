@@ -3,7 +3,7 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          'public/js/roessle.js': 'js/roessle.coffee'
+          'dist/js/roessle.js': 'js/roessle.coffee'
   
     sass: 
       dist:
@@ -11,7 +11,7 @@ module.exports = (grunt) ->
           style: 'expanded'
           bundleExec: true 
         files: 
-          'public/css/roessle.css': 'css/roessle.scss'
+          'dist/css/roessle.css': 'css/roessle.scss'
       
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-sass'
