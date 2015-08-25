@@ -1,0 +1,16 @@
+body {
+  ////////////////
+  // Page ids
+  ///////////////
+  $page-start: #page-2323191722;
+  $page-hotel: #page-2352764222;
+  
+  &#{$page-start} {
+    background: url(/images/hero-images/cavallino.jpg);
+  }
+  
+  &#{$page-hotel} {
+    background: url(/images/hero-images/karin_dani1.jpg);
+  }
+}
+
