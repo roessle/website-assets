@@ -33,7 +33,19 @@ module.exports = (grunt) ->
           repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets.git',
           silent: true
         src: [ '**' ]
-            
+    
+    'compile-handlebars': 
+      html:
+        files: [{
+            expand: true
+            src: '*.hbs'
+            dest: 'dist/'
+            ext: '.html'
+        }],
+        templateData: {
+          'hero-images': grunt.file.expand('images/hero-images/*.jpg')
+        }
+              
     imagemin:
       'hero-images': 
         options:
@@ -52,7 +64,8 @@ module.exports = (grunt) ->
           bundleExec: true 
         files: 
           'dist/css/roessle.css': 'css/roessle.scss'
-      
+
+  grunt.loadNpmTasks 'grunt-compile-handlebars'      
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
@@ -60,6 +73,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-gh-pages'
   
   grunt.registerTask 'default', [ 'build' ]
-  grunt.registerTask 'build', [ 'sass', 'coffee', 'copy:*', 'imagemin:*' ]
+  grunt.registerTask 'build', [ 'sass', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
   grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
   

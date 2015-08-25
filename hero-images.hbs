@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+  <meta charset="utf-8"/>
+  <style>
+		body {
+			background-color: #CAAC99;
+			margin: 0px;
+		}
+    .hero-image { 
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 500px;
+			margin-top: 120px;
+			margin-bottom: 500px;
+		}
+  </style>       
+</head>
+
+<body>
+{{#each hero-images}}
+<div class="hero-image" style="background-image: url({{this}})"></div>
+{{/each}}
+</body>
+
+</html>
