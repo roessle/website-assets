@@ -6,11 +6,11 @@ body {
   $page-hotel: #page-2352764222;
   
   &#{$page-start} {
-    background: url(/images/hero-images/cavallino.jpg);
+    background-image: url(/images/hero-images/cavallino.jpg);
   }
   
   &#{$page-hotel} {
-    background: url(/images/hero-images/karin_dani1.jpg);
+    background-image: url(/images/hero-images/karin_dani1.jpg);
   }
 }
 
