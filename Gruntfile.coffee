@@ -28,7 +28,7 @@ module.exports = (grunt) ->
       options: 
         base: 'dist'
       src: [ '**' ]
-      travis:
+      ci:
         options:
           repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets.git',
           silent: true
