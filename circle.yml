@@ -10,4 +10,6 @@ deployment:
   production:
     branch: master
     commands:
+      - git config --global user.email "circleci@roessle.eu"
+      - git config --global user.name "Roessle CircleCI"
       - grunt gh-pages:ci
