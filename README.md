@@ -1,3 +1,3 @@
 # Website assets for roessle.eu
 
-[![Build Status](https://travis-ci.org/roessle/website-assets.svg)](https://travis-ci.org/roessle/website-assets)
+[![Build Status](https://circleci.com/gh/roessle/website-assets.svg?style=shield)](https://circleci.com/gh/roessle/website-assets)
