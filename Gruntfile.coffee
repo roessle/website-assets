@@ -4,7 +4,15 @@ module.exports = (grunt) ->
   
   grunt.initConfig
   
-    copy: 
+    autoprefixer:
+      dist:
+        options:
+          browsers: ['last 5 versions', '> 1% in DE', 'ie >= 8']
+          map: true
+        files:
+          'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
+
+    copy:
       contrib: 
         files: [ {
           expand: true,
@@ -18,7 +26,10 @@ module.exports = (grunt) ->
           src: [ 'images/backgrounds/*.png' ],
           dest: 'dist/'
         } ]
-  
+      css:
+        files:
+          'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
+
     coffee:
       compile:
         files:
@@ -63,8 +74,9 @@ module.exports = (grunt) ->
           style: 'expanded'
           bundleExec: true 
         files: 
-          'dist/css/roessle.css': 'css/roessle.scss'
+          'dist/css/roessle-sass.css': 'css/roessle.scss'
 
+  grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-compile-handlebars'      
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -73,6 +85,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-gh-pages'
   
   grunt.registerTask 'default', [ 'build' ]
-  grunt.registerTask 'build', [ 'sass', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
+  grunt.registerTask 'build', [ 'sass', 'autoprefixer', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
   grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
   
