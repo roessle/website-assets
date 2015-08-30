@@ -16,7 +16,8 @@
     "grunt-contrib-copy": "~0.8.1",
     "grunt-contrib-imagemin": "~0.9.4",
     "imagemin-mozjpeg": "~5.1.0",
-    "grunt-compile-handlebars": "~2.0.0"
+    "grunt-compile-handlebars": "~2.0.0",
+    "grunt-autoprefixer": "~3.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
