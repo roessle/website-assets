@@ -5,6 +5,18 @@
 .logo {
   margin-left: 10px;
   margin-bottom: -30px;
+  height: 136px;
+
+  .logo-stamp-roessle {
+    height: 96px;
+    width: 222px;
+    background: url(/images/logos/stamp_roessle.png);
+    transform: rotate(-8.8deg);
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+  }
+
 }
     
 .breadcrumb-float-outer-wrapper {
