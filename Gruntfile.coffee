@@ -56,6 +56,12 @@ module.exports = (grunt) ->
         templateData: {
           'hero-images': grunt.file.expand('images/hero-images/*.jpg')
         }
+
+    'http-server':
+      dist:
+        root: 'dist/'
+        port: 9000
+        host: "0.0.0.0"
               
     imagemin:
       'hero-images': 
@@ -83,8 +89,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-gh-pages'
+  grunt.loadNpmTasks 'grunt-http-server'
   
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build', [ 'sass', 'autoprefixer', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
   grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
+  grunt.registerTask 'serve', [ 'build', 'http-server' ]
   
