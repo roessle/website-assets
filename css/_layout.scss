@@ -5,6 +5,30 @@
 .logo {
   margin-left: 10px;
   margin-bottom: -30px;
+  height: 136px;
+
+  .logo-roessle {
+    transform: rotate(-8.8deg);
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+
+    .logo-hotel-gasthof {
+      height: 17px;
+      width: 105px;
+      background: url(/images/logos/stamp_hotel_gasthof.png);
+    }
+
+    .logo-stamp-roessle {
+      height: 96px;
+      width: 222px;
+      background: url(/images/logos/stamp_roessle.png);
+      margin-top: 2px;
+      margin-left: 16px;
+    }
+  }
+
+
 }
     
 .breadcrumb-float-outer-wrapper {

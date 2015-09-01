@@ -26,6 +26,12 @@ module.exports = (grunt) ->
           src: [ 'images/backgrounds/*.png' ],
           dest: 'dist/'
         } ]
+      logos:
+        files: [ {
+          expand: true,
+          src: [ 'images/logos/*.png' ],
+          dest: 'dist/'
+        } ]
       css:
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
