@@ -30,14 +30,14 @@
 
 
 }
-    
+
 .breadcrumb-float-outer-wrapper {
   padding-left: 10px;
 }
-    
+
 .navigation-colors-bar {
   background: url(/images/backgrounds/bar.png);
-  background-color: #9d0525;
+  background-color: $navigation-bar-background-color;
   height: 20px;
   margin: 0;
   position: fixed;
@@ -45,9 +45,9 @@
   width: 100%;
   z-index: 11;
 }
-    
+
 .navigation-colors {
-  background-color: #CAAC99;
+  background-color: $navigation-background-color;
   padding-top: 27px;
 }
 
