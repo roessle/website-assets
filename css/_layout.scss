@@ -15,8 +15,14 @@
 
     .logo-hotel-gasthof {
       height: 17px;
-      width: 105px;
-      background: url(/images/logos/stamp_hotel_gasthof.png);
+      color: $logo-color;
+      font-family: "Alegreya Sans",sans-serif,"google";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 17px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      word-spacing: 4px;
     }
 
     .logo-stamp-roessle {
