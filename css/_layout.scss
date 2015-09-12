@@ -8,26 +8,31 @@
   height: 136px;
 
   .logo-roessle {
-    transform: rotate(-8.8deg);
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     left: 20px;
 
     .logo-hotel-gasthof {
+      transform: rotate(-8.8deg);
       height: 17px;
-      width: 105px;
-      background: url(/images/logos/stamp_hotel_gasthof.png);
+      color: $logo-color;
+      font-family: "Alegreya Sans",sans-serif,"google";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 17px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      word-spacing: 4px;
     }
 
     .logo-stamp-roessle {
-      height: 96px;
-      width: 222px;
+      height: 123px;
+      width: 229px;
       background: url(/images/logos/stamp_roessle.png);
-      margin-top: 2px;
+      margin-top: -10px;
       margin-left: 16px;
     }
   }
-
 
 }
 

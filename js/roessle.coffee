@@ -5,6 +5,6 @@ $(document).ready ->
 
   $('.logo').prepend \
     '<div class=logo-roessle>' +
-      '<div class=logo-hotel-gasthof></div>' +
+      '<div class=logo-hotel-gasthof>Hotel Gasthof</div>' +
       '<div class=logo-stamp-roessle></div>' +
     '</div>'
