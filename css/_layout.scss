@@ -65,27 +65,47 @@
   }
 }
 
-// 
+//
 // Site footer
-// 
+//
 
-// 
+//
 // Page content
-// 
+//
 
-.content-options-inner, .sidebar-options {
+.content-options-inner {
   h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
     text-transform: lowercase;
+    margin-bottom: 50px;
   }
   h1 {
     a:link, a:visited {
       text-transform: lowercase;
+      margin-bottom: 50px;
     }
+  }
+  h2:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+    margin-bottom: 30px;
+  }
+  h2 {
+    a:link, a:visited {
+      text-transform: lowercase;
+      margin-bottom: 30px;
+    }
+  }
+
+  .j-text {
+    margin-bottom: 50px;
+  }
+
+  .j-gallery {
+    margin-bottom: 50px;
   }
 }
 
 %text-font {
-  font-size: 18px !important;
+  font-size: 22px !important;
 }
 
 .j-text {
