@@ -22,8 +22,15 @@ npm install
 grunt build
 ```
 
-## Starting the local http server
+## Starting the local HTTP server
 
 ```shell
 grunt http-server
 ```
+
+### Loading assets from the local HTTP server
+
+1. Install [Switcheroo Redirector](https://github.com/ranjez/Switcheroo) Extension in Chrome
+2. Setup the following redirect rule in **Switcheroo Redirector**: 
+
+    `http://assets.roessle.eu/` > `http://localhost:9000/`
