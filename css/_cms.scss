@@ -2,3 +2,17 @@
   // Disable editing of logo
   display: none;
 }
+
+.cc-m-text {
+
+  .cc-m-text-font-size {
+    // Do not allow a different font size on page
+    display: none !important;
+  }
+
+  .cc-choose-color {
+    // Do not allow a different font colors page
+    display: none !important;
+  }
+
+}
