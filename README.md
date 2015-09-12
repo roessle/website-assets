@@ -9,7 +9,7 @@ Assets for roessle-stetten.jmdo.com / roessle.eu
 * Node.js
 * npm
 * Grunt
-* 
+
 ## Install the dependencies
 
 ```shell
