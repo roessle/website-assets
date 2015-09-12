@@ -1,6 +1,6 @@
 # Website assets for roessle.eu
 
-Assets for roessle-stetten.jmdo.com / roessle.eu
+Assets for [roessle-stetten.jmdo.com](http://roessle-stetten.jmdo.com) / [roessle.eu](http://roessle.eu)
 
 [![Build Status](https://circleci.com/gh/roessle/website-assets.svg?style=shield)](https://circleci.com/gh/roessle/website-assets)
 
