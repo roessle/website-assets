@@ -1,5 +1,6 @@
 module.exports = (grunt) ->
 
+  require('load-grunt-tasks')(grunt)
   mozjpeg = require('imagemin-mozjpeg')
 
   grunt.initConfig
@@ -87,15 +88,6 @@ module.exports = (grunt) ->
           bundleExec: true
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
-
-  grunt.loadNpmTasks 'grunt-autoprefixer'
-  grunt.loadNpmTasks 'grunt-compile-handlebars'
-  grunt.loadNpmTasks 'grunt-contrib-copy'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-imagemin'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
-  grunt.loadNpmTasks 'grunt-gh-pages'
-  grunt.loadNpmTasks 'grunt-http-server'
 
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build', [ 'sass', 'autoprefixer', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
