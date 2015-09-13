@@ -13,6 +13,10 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
 
+    clean: [
+      'dist'
+    ]
+
     copy:
       contrib:
         files: [ {
@@ -96,5 +100,5 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib' ]
-  grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
+  grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]
   grunt.registerTask 'serve', [ 'build', 'http-server' ]
