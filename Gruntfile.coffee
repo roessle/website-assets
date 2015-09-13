@@ -90,6 +90,6 @@ module.exports = (grunt) ->
           'dist/css/roessle-sass.css': 'css/roessle.scss'
 
   grunt.registerTask 'default', [ 'build' ]
-  grunt.registerTask 'build', [ 'sass', 'autoprefixer', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
+  grunt.registerTask 'build', [ 'newer:sass', 'newer:autoprefixer', 'newer:coffee', 'newer:copy', 'newer:imagemin', 'newer:compile-handlebars' ]
   grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
   grunt.registerTask 'serve', [ 'build', 'http-server' ]
