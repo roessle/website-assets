@@ -25,7 +25,7 @@ grunt build
 ## Starting the local HTTP server
 
 ```shell
-grunt http-server
+grunt dev
 ```
 
 ### Loading assets from the local HTTP server

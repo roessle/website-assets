@@ -73,6 +73,10 @@ module.exports = (grunt) ->
         root: 'dist/'
         port: 9000
         host: "0.0.0.0"
+      dev:
+        root: 'dist/'
+        port: 9000
+        runInBackground: true
 
     imagemin:
       'hero-images':
@@ -93,6 +97,14 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
 
+    watch:
+      css:
+        files: [ 'css/**/*.scss' ]
+        tasks: [ 'build:css' ]
+      js:
+        files: [ 'js/**/*.js' ]
+        tasks: [ 'build:js' ]
+
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
@@ -101,4 +113,5 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib' ]
   grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]
-  grunt.registerTask 'serve', [ 'build', 'http-server' ]
+  grunt.registerTask 'serve', [ 'build', 'http-server:dist' ]
+  grunt.registerTask 'dev', [ 'build', 'http-server:dev', 'watch' ]
