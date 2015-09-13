@@ -1,5 +1,6 @@
 module.exports = (grunt) ->
 
+  require('load-grunt-tasks')(grunt)
   mozjpeg = require('imagemin-mozjpeg')
 
   grunt.initConfig
@@ -12,24 +13,28 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
 
+    clean: [
+      'dist'
+    ]
+
     copy:
       contrib:
         files: [ {
-          expand: true,
-          src: [ 'CNAME' ],
-          dest: 'dist/',
+          expand: true
+          src: [ 'CNAME' ]
+          dest: 'dist/'
           cwd: 'contrib/'
         } ]
       'images-backgrounds':
         files: [ {
-          expand: true,
-          src: [ 'images/backgrounds/*.png' ],
+          expand: true
+          src: [ 'images/backgrounds/*.png' ]
           dest: 'dist/'
         } ]
       logos:
         files: [ {
-          expand: true,
-          src: [ 'images/logos/*.png' ],
+          expand: true
+          src: [ 'images/logos/*.png' ]
           dest: 'dist/'
         } ]
       css:
@@ -47,7 +52,7 @@ module.exports = (grunt) ->
       src: [ '**' ]
       ci:
         options:
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets-deployment.git',
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets-deployment.git'
           silent: true
         src: [ '**' ]
 
@@ -58,7 +63,7 @@ module.exports = (grunt) ->
             src: '*.hbs'
             dest: 'dist/'
             ext: '.html'
-        }],
+        }]
         templateData: {
           'hero-images': grunt.file.expand('images/hero-images/*.jpg')
         }
@@ -88,16 +93,12 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
 
-  grunt.loadNpmTasks 'grunt-autoprefixer'
-  grunt.loadNpmTasks 'grunt-compile-handlebars'
-  grunt.loadNpmTasks 'grunt-contrib-copy'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-imagemin'
-  grunt.loadNpmTasks 'grunt-contrib-sass'
-  grunt.loadNpmTasks 'grunt-gh-pages'
-  grunt.loadNpmTasks 'grunt-http-server'
-
   grunt.registerTask 'default', [ 'build' ]
-  grunt.registerTask 'build', [ 'sass', 'autoprefixer', 'coffee', 'copy:*', 'imagemin:*', 'compile-handlebars:*' ]
-  grunt.registerTask 'deploy', [ 'build', 'gh-pages' ]
+  grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
+  grunt.registerTask 'build:js', [ 'newer:coffee' ]
+  grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:imagemin' ]
+  grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
+  grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
+  grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib' ]
+  grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]
   grunt.registerTask 'serve', [ 'build', 'http-server' ]
