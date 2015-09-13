@@ -20,21 +20,21 @@ module.exports = (grunt) ->
     copy:
       contrib:
         files: [ {
-          expand: true,
-          src: [ 'CNAME' ],
-          dest: 'dist/',
+          expand: true
+          src: [ 'CNAME' ]
+          dest: 'dist/'
           cwd: 'contrib/'
         } ]
       'images-backgrounds':
         files: [ {
-          expand: true,
-          src: [ 'images/backgrounds/*.png' ],
+          expand: true
+          src: [ 'images/backgrounds/*.png' ]
           dest: 'dist/'
         } ]
       logos:
         files: [ {
-          expand: true,
-          src: [ 'images/logos/*.png' ],
+          expand: true
+          src: [ 'images/logos/*.png' ]
           dest: 'dist/'
         } ]
       css:
@@ -52,7 +52,7 @@ module.exports = (grunt) ->
       src: [ '**' ]
       ci:
         options:
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets-deployment.git',
+          repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets-deployment.git'
           silent: true
         src: [ '**' ]
 
@@ -63,7 +63,7 @@ module.exports = (grunt) ->
             src: '*.hbs'
             dest: 'dist/'
             ext: '.html'
-        }],
+        }]
         templateData: {
           'hero-images': grunt.file.expand('images/hero-images/*.jpg')
         }
