@@ -45,6 +45,7 @@ module.exports = (grunt) ->
       compile:
         files:
           'dist/js/roessle.js': 'js/roessle.coffee'
+          'dist/js/gurado.js': 'js/gurado.coffee'
 
     'gh-pages':
       options:
