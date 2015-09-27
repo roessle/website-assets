@@ -48,6 +48,11 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
           'dist/css/gurado.css': ['dist/css/gurado-prefixed.css']
+      'gurado-example':
+        files:
+          'dist/gurado-example.html': ['gurado-example.html']
+          'dist/css/gurado-example.css': ['gurado-example.css']
+          'dist/js/gurado-example.js': ['gurado-example.js']
 
     coffee:
       compile:
@@ -114,14 +119,18 @@ module.exports = (grunt) ->
       js:
         files: [ 'js/**/*.js' ]
         tasks: [ 'build:js' ]
+      'gurado-example':
+        files: [ 'gurado-example.*' ]
+        tasks: [ 'build:gurado-example' ]
 
   grunt.registerTask 'default', [ 'build' ]
+  grunt.registerTask 'build:gurado-example', [ 'newer:copy:gurado-example' ]
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
   grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:imagemin' ]
   grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
-  grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib' ]
+  grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib', 'build:gurado-example' ]
   grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]
   grunt.registerTask 'serve', [ 'build', 'http-server:dist' ]
   grunt.registerTask 'dev', [ 'build', 'http-server:dev', 'watch' ]
