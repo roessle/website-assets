@@ -37,6 +37,12 @@ module.exports = (grunt) ->
           src: [ 'images/logos/*.png' ]
           dest: 'dist/'
         } ]
+      favicons:
+        files: [ {
+          expand: true
+          src: [ 'images/favicons/*.png' ]
+          dest: 'dist/'
+        } ]
       css:
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
@@ -108,7 +114,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
-  grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:imagemin' ]
+  grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:imagemin' ]
   grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib' ]
