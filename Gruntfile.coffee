@@ -12,6 +12,7 @@ module.exports = (grunt) ->
           map: true
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
+          'dist/css/gurado-prefixed.css': ['dist/css/gurado-sass.css']
 
     clean: [
       'dist'
@@ -46,11 +47,13 @@ module.exports = (grunt) ->
       css:
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
+          'dist/css/gurado.css': ['dist/css/gurado-prefixed.css']
 
     coffee:
       compile:
         files:
           'dist/js/roessle.js': 'js/roessle.coffee'
+          'dist/js/gurado.js': 'js/gurado.coffee'
 
     'gh-pages':
       options:
@@ -102,6 +105,7 @@ module.exports = (grunt) ->
           bundleExec: true
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
+          'dist/css/gurado-sass.css': 'css/gurado.scss'
 
     watch:
       css:
