@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=ABeeZee);
+
 body {
   background-image: none;
   background-color: #ffffff;
@@ -510,8 +513,6 @@ a.backtohome:hover, .page-sitemap .pager .pages li.current, .page-sitemap .pager
 
 /*  Top Menu Styles....*/
 
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700,900);
-@import url(https://fonts.googleapis.com/css?family=ABeeZee);
 body {
   font-family: 'Alegreya Sans', sans-serif;
 }
