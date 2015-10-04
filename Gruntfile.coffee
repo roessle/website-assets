@@ -13,6 +13,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
           'dist/css/gurado-prefixed.css': ['dist/css/gurado-sass.css']
+          'dist/css/roessle-bootstrap-prefixed.css': ['dist/css/roessle-bootstrap-sass.css']
 
     clean: [
       'dist'
@@ -48,6 +49,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
           'dist/css/gurado.css': ['dist/css/gurado-prefixed.css']
+          'dist/css/roessle-bootstrap.css': ['dist/css/roessle-bootstrap-prefixed.css']
       'gurado-example':
         files:
           'dist/gurado-example.html': ['gurado-example.html']
@@ -111,6 +113,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
           'dist/css/gurado-sass.css': 'css/gurado.scss'
+          'dist/css/roessle-bootstrap-sass.css': 'css/roessle-bootstrap.scss'
 
     watch:
       css:
