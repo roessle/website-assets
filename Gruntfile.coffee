@@ -122,6 +122,9 @@ module.exports = (grunt) ->
       js:
         files: [ 'js/**/*.js' ]
         tasks: [ 'build:js' ]
+      html:
+        files: [ '*.hbs' ]
+        tasks: [ 'build:html' ]
       'gurado-example':
         files: [ 'gurado-example.*' ]
         tasks: [ 'build:gurado-example' ]
