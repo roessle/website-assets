@@ -29,7 +29,7 @@ module.exports = (grunt) ->
       'images-backgrounds':
         files: [ {
           expand: true
-          src: [ 'images/backgrounds/*.png' ]
+          src: [ 'images/backgrounds/*.{png,jpg}' ]
           dest: 'dist/'
         } ]
       logos:
