@@ -1,0 +1,34 @@
+// Hide logo in Footer
+.about-us {
+  display: none;
+}
+.mt-footer-static .payment-methods .footer-static-content h3 {
+    padding: 20px 0 0 0;
+}
+
+// Do not show image beside introduction text
+.product-img-box {
+  display: none !important;
+}
+
+// Do not show facebook follow button in footer
+.mt-footer-static-container-top {
+  display: none;
+}
+
+// Custom hero-image
+.slider img {
+  content: url("");
+  height: 400px;
+  width: 100%;
+  background: url("/images/hero-images/gurado.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.mt-footer-static-container h1, .mt-footer-static-container h2, .mt-footer-static-container h3, .mt-footer-static-container h4, .mt-footer-static-container h5, .mt-footer-static-container h6, .mt-footer-static-container p, .mt-footer-static-container span, .mt-footer-static-container strong, .mt-footer-static-container label, .mt-footer-static-container, .mt-footer-static-container-bottom .mt-footer-static, .footer-static-title h1, .footer-static-title h2, .footer-static-title h3, .footer-static-title h4, .footer-static-title h5, .footer-static-title h6 {
+  font-family: 'Alegreya Sans', sans-serif !important;
+}
+
+.mt-copyright {
+  font-family: 'Alegreya Sans', sans-serif !important;
+}
