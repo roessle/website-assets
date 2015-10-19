@@ -1,3 +1,152 @@
+@charset "utf-8";
+
+@import "colors";
+
+/////////////////// Header
+
+.wrapper {
+  background: none !important;
+}
+
+.navigation-colors-bar {
+  background: url(/images/backgrounds/bar.png);
+  background-color: $navigation-bar-background-color;
+  height: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.meta-navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  background: linear-gradient(right, $white, $white, $white, $white, rgba(0,0,0,0));
+  background-size: 50% 1px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  .row {
+    float: right;
+  }
+
+  ul {
+
+    li {
+      width: auto;
+      float: left;
+
+      &:not(:last-child) {
+        background: linear-gradient($white, $white);
+        background-size: 1px 50%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        font-size: 17px;
+        text-transform: lowercase;
+        display: block;
+        padding: 4px 30px;
+        color: #404040;
+
+        &:hover, &:active {
+          color: #9d0525;
+        }
+      }
+    }
+  }
+}
+
+.mt-top-menu {
+  background-image: url("/images/backgrounds/light_stone.jpg") !important;
+  background-repeat: repeat;
+  height: 108px;
+  margin-top: 0px !important;
+  margin-bottom: 7px;
+  z-index: auto;
+
+  padding-top: 28px;
+
+  .quick-access {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    a {
+      color: #404040;
+      border-style: none;
+      font-weight: 600;
+    }
+
+    ul.links li:hover {
+	     background-color: transparent !important;
+    }
+  }
+
+  a.logo {
+    right: initial !important;
+    left: 20px !important;
+    bottom: -40px !important;
+    top: inherit !important;
+  }
+
+  .logo-stamp-hotel-gasthof-roessle {
+    height: 132px;
+    width: 260px;
+    background: url(/images/logos/stamp_hotel_gasthof_roessle.png);
+  }
+}
+
+// Custom hero-image
+.slider {
+
+  .hero-1 {
+    height: 400px;
+    background-color: $maroon;
+
+    .hero-1-txt {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      text-transform: lowercase;
+      color: $white;
+      font-size: 20px;
+      text-align: right;
+    }
+  }
+
+  .hero-2 {
+    height: 400px;
+    background: url("/images/hero-images/cavallino.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  [class*="span"] {
+    margin:0
+  }
+
+  .span4 {
+    width: 33.33334%
+  }
+
+  .span8 {
+    width: 66.66667%
+  }
+
+  img {
+    content: url("");
+    height: 400px;
+    width: 100%;
+    background: url("/images/hero-images/gurado.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+}
+
+/////////////////// Footer
+
 // Hide logo in Footer
 .about-us {
   display: none;
@@ -14,15 +163,6 @@
 // Do not show facebook follow button in footer
 .mt-footer-static-container-top {
   display: none;
-}
-
-// Custom hero-image
-.slider img {
-  content: url("");
-  height: 400px;
-  width: 100%;
-  background: url("/images/hero-images/gurado.jpg") no-repeat center center;
-  background-size: cover;
 }
 
 .mt-footer-static-container h1, .mt-footer-static-container h2, .mt-footer-static-container h3, .mt-footer-static-container h4, .mt-footer-static-container h5, .mt-footer-static-container h6, .mt-footer-static-container p, .mt-footer-static-container span, .mt-footer-static-container strong, .mt-footer-static-container label, .mt-footer-static-container, .mt-footer-static-container-bottom .mt-footer-static, .footer-static-title h1, .footer-static-title h2, .footer-static-title h3, .footer-static-title h4, .footer-static-title h5, .footer-static-title h6 {
