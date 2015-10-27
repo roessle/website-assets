@@ -205,6 +205,25 @@ h1, h2, h3, h4, h5, h6
 
 }
 
+/////////////////// Start page
+.product-geschenkgutschein {
+  .product-name {
+    // Do not show header
+    display: none;
+  }
+
+  // Do not show image beside introduction text
+  .product-img-box {
+    display: none !important;
+  }
+
+  .description .std p strong {
+    font-size: 22px;
+    margin-bottom: 40px;
+    display: block;
+  }
+}
+
 /////////////////// Footer
 
 // Hide logo in Footer
@@ -213,11 +232,6 @@ h1, h2, h3, h4, h5, h6
 }
 .mt-footer-static .payment-methods .footer-static-content h3 {
     padding: 20px 0 0 0;
-}
-
-// Do not show image beside introduction text
-.product-img-box {
-  display: none !important;
 }
 
 // Do not show facebook follow button in footer
