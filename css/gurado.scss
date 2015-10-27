@@ -113,8 +113,14 @@ h1, h2, h3, h4, h5, h6
       font-weight: 600;
     }
 
-    ul.links li:hover {
-	     background-color: transparent !important;
+    ul.links {
+      // Hide "Anmelden" in top menu
+      li > a[title="Anmelden"] {
+        display: none;
+      }
+      li:hover {
+        background-color: transparent !important;
+      }
     }
   }
 
