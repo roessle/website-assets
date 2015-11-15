@@ -234,12 +234,8 @@ h1, h2, h3, h4, h5, h6
     }
   }
 
-  img {
-    content: url("");
-    height: 400px;
-    width: 100%;
-    background: url("/images/hero-images/gurado.jpg") no-repeat center center;
-    background-size: cover;
+  >img {
+    display: none;
   }
 
 }
