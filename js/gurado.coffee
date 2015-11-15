@@ -1,7 +1,7 @@
 jQuery(document).ready ->
   #
-  jQuery('.logo').find('img[src$="roessle/media/homepage/websites/2/stamp_roessle.png"]')
-    .replaceWith '<div class="visible-desktop visible-tablet logo-stamp-hotel-gasthof-roessle"></div>'
+  jQuery('.logo')
+    .append '<div class="visible-desktop visible-tablet logo-stamp-hotel-gasthof-roessle"></div>'
 
   jQuery('.slider')
     .append '
