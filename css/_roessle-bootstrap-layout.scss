@@ -1,0 +1,86 @@
+
+.navigation-colors-bar {
+  background: url(/images/backgrounds/bar.png);
+  background-color: $navigation-bar-background-color;
+  height: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-default {
+  background-image: url("/images/backgrounds/light_stone.jpg") !important;
+  background-repeat: repeat;
+  border: none;
+}
+
+.main-navbar {
+  padding-top: 20px;
+
+  .main-nav {
+    font-size: 17px;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+}
+
+
+.meta-navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  background: linear-gradient(to left, $white, $white, $white, $white, rgba(0,0,0,0));
+  background-size: 50% 1px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    background-size: 70% 1px;
+  }
+  @media only screen and (max-width: 480px) {
+    background: none;
+    background-size: 100% 1px;
+    border-bottom: 1px solid $white;
+  }
+
+  .row {
+    float: right;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      width: auto;
+      float: left;
+
+      &:not(:last-child) {
+        background: linear-gradient($white, $white);
+        background-size: 1px 50%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        font-size: 17px;
+        text-transform: lowercase;
+        display: block;
+        padding: 2px 30px;
+        color: #404040;
+
+        &:hover, &:active {
+          color: $maroon;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .row {
+      float: none;
+    }
+    ul li {
+      width: 33%;
+    }
+  }
+}

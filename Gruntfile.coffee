@@ -134,7 +134,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
   grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:imagemin' ]
-  grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
+  grunt.registerTask 'build:html', [ 'compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib', 'build:gurado-example' ]
   grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]
