@@ -51,6 +51,7 @@ module.exports = (grunt) ->
       'gurado-example':
         files:
           'dist/gurado-example.html': ['gurado-example.html']
+          'dist/gurado-example2.html': ['gurado-example2.html']
           'dist/css/gurado-example.css': ['gurado-example.css']
           'dist/js/gurado-example.js': ['gurado-example.js']
 
