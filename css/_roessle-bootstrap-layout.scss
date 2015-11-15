@@ -1,4 +1,8 @@
 
+.page-wrapper {
+  position: relative;
+}
+
 .navigation-colors-bar {
   background: url(/images/backgrounds/bar.png);
   background-color: $navigation-bar-background-color;
@@ -83,4 +87,8 @@
       width: 33%;
     }
   }
+}
+
+a {
+  text-decoration: none !important;
 }
