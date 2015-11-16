@@ -19,6 +19,7 @@
 
 .main-navbar {
   padding-top: 20px; // Add padding to meta navigation
+  margin-bottom: 7px;
 
   .main-nav {
     font-size: 17px;
@@ -119,6 +120,139 @@
   }
 }
 
+.logo-roessle {
+  position: absolute;
+  bottom: 60px;
+  // left: 20px;
+
+  .logo-hotel-gasthof {
+    display: block;
+    transform: rotate(-8.8deg);
+    height: 17px;
+    color: $logo-color;
+    font-family: "Alegreya Sans",sans-serif,"google";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+  }
+
+  .logo-stamp-roessle {
+    display: block;
+    height: 123px;
+    width: 229px;
+    background: url(/images/logos/stamp_roessle.png);
+    margin-top: -10px;
+    margin-left: 16px;
+    text-indent: -9999px
+  }
+}
+
+// Custom hero-image
+.slider {
+
+  padding-left: 0px;
+  padding-right: 0px;
+
+  .hero-1 {
+    height: 400px;
+    background-color: $maroon;
+
+    .hero-1-txt {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      margin-left: 30px;
+      text-transform: lowercase;
+      color: $white;
+      font-size: 20px;
+      @media only screen and (max-width: 480px) {
+        font-size: 17px;
+      }
+      text-align: right;
+    }
+  }
+
+  .hero-2 {
+    height: 400px;
+    background: url("/images/hero-images/cavallino.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  // [class*="span"] {
+  //   margin:0
+  // }
+  //
+  // .span4 {
+  //   width: 33.33334%
+  // }
+  //
+  // .span8 {
+  //   width: 66.66667%
+  // }
+  //
+  // @media only screen and (min-width: 245px) and (max-width: 767px) {
+  //   .span4 {
+  //     float: left;
+  //     width: 40%;
+  //   }
+  //   .span8 {
+  //     float: left;
+  //     width: 60%;
+  //   }
+  // }
+
+}
+
+//
+// Page content
+//
+
 a {
   text-decoration: none !important;
+}
+
+.content-options-inner {
+  h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+    margin-bottom: 50px;
+  }
+  h1 {
+    a:link, a:visited {
+      text-transform: lowercase;
+      margin-bottom: 50px;
+    }
+  }
+  h2:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+    margin-bottom: 30px;
+  }
+  h2 {
+    a:link, a:visited {
+      text-transform: lowercase;
+      margin-bottom: 30px;
+    }
+  }
+
+  .j-text {
+    margin-bottom: 50px;
+  }
+
+  .j-gallery {
+    margin-bottom: 50px;
+  }
+}
+
+%text-font {
+  font-size: 22px !important;
+}
+
+.j-text {
+  @extend %text-font;
+  span {
+    @extend %text-font;
+  }
 }

@@ -14,4 +14,21 @@ body[style*="background-position"] {
         width: 1170px - 185px;
     }
   }
+  .cc-inner {
+    padding-right: 185px;
+  }
+}
+
+.cc-m-text {
+
+  .cc-m-text-font-size {
+    // Do not allow a different font size on page
+    display: none !important;
+  }
+
+  .cc-choose-color {
+    // Do not allow a different font colors page
+    display: none !important;
+  }
+
 }
