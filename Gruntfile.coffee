@@ -13,6 +13,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
           'dist/css/gurado-prefixed.css': ['dist/css/gurado-sass.css']
+          'dist/css/roessle-bootstrap-prefixed.css': ['dist/css/roessle-bootstrap-sass.css']
 
     clean: [
       'dist'
@@ -48,6 +49,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
           'dist/css/gurado.css': ['dist/css/gurado-prefixed.css']
+          'dist/css/roessle-bootstrap.css': ['dist/css/roessle-bootstrap-prefixed.css']
       'gurado-example':
         files:
           'dist/gurado-example.html': ['gurado-example.html']
@@ -111,6 +113,7 @@ module.exports = (grunt) ->
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
           'dist/css/gurado-sass.css': 'css/gurado.scss'
+          'dist/css/roessle-bootstrap-sass.css': 'css/roessle-bootstrap.scss'
 
     watch:
       css:
@@ -119,6 +122,9 @@ module.exports = (grunt) ->
       js:
         files: [ 'js/**/*.js' ]
         tasks: [ 'build:js' ]
+      html:
+        files: [ '*.hbs' ]
+        tasks: [ 'build:html' ]
       'gurado-example':
         files: [ 'gurado-example.*' ]
         tasks: [ 'build:gurado-example' ]
@@ -128,7 +134,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
   grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:imagemin' ]
-  grunt.registerTask 'build:html', [ 'newer:compile-handlebars' ]
+  grunt.registerTask 'build:html', [ 'compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib', 'build:gurado-example' ]
   grunt.registerTask 'deploy', [ 'clean', 'build', 'gh-pages' ]

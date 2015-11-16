@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=ABeeZee);
+
+@import "colors";
+
+$font-family-base:                         'Alegreya Sans', sans-serif;
+
+// Navbar
+$navbar-height:                            108px;
+$navbar-border-radius:                     0px;
+$navbar-default-color:                     #404040;
+$navbar-default-link-color:                #404040;
+$navbar-default-link-hover-color:          $maroon;
+$navbar-default-link-active-color:         $maroon;
+$navbar-default-link-active-bg:            transparent;
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "roessle-bootstrap-layout";
+@import "roessle-bootstrap-cms";

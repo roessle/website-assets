@@ -1,0 +1,34 @@
+body[style*="background-position"] {
+  @media (min-width: 768px) {
+    .container {
+        width: 750px - 185px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+        width: 970px - 185px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+        width: 1170px - 185px;
+    }
+  }
+  .cc-inner {
+    padding-right: 185px;
+  }
+}
+
+.cc-m-text {
+
+  .cc-m-text-font-size {
+    // Do not allow a different font size on page
+    display: none !important;
+  }
+
+  .cc-choose-color {
+    // Do not allow a different font colors page
+    display: none !important;
+  }
+
+}
