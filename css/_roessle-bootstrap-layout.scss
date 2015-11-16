@@ -125,6 +125,10 @@
   bottom: 60px;
   // left: 20px;
 
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+
   .logo-hotel-gasthof {
     display: block;
     transform: rotate(-8.8deg);
@@ -211,13 +215,64 @@
 // Page content
 //
 
-a {
-  text-decoration: none !important;
+// a {
+//   text-decoration: none !important;
+// }
+
+body
+{
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333333;
 }
 
-.content-options-inner {
+p, table, td
+{
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333333;
+}
+
+input, textarea
+{
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "ABeeZee",sans-serif,"google";
+    font-weight: normal;
+    font-style: normal;
+    color: inherit;
+}
+
+a:link,
+a:visited
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active,
+a:hover
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+div.hr
+{
+    border-bottom-style:dotted;
+    border-bottom-width:1px;
+    border-color: #666666;
+    height: 1px;
+}
+
+#content_area {
   h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
     text-transform: lowercase;
+    text-align: center;
     margin-bottom: 50px;
   }
   h1 {
