@@ -211,6 +211,16 @@
 
 }
 
+.sidebar {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #2a2a2a;
+
+  p, table, td, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #fff;
+  }
+}
+
 .footer {
   padding-bottom: 40px;
   background-color: #2a2a2a;
