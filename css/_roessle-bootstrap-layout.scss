@@ -272,6 +272,7 @@ body
     font-size: 14px;
     line-height: 1.42857;
     color: #333333;
+    overflow-x: hidden; // Hide X scrollbar (needed for sliders)
 }
 
 p, table, td
@@ -314,6 +315,66 @@ div.hr
     border-bottom-width:1px;
     border-color: #666666;
     height: 1px;
+}
+
+.content-slider {
+  background-color: $maroon;
+  margin: 0 -2999px;
+  padding: 0 2999px;
+  height: 400px;
+
+  .slider-txt-wrapper-left, .slider-txt-wrapper-right {
+    height: 400px;
+    width: 33.33333%;
+    position: absolute;
+
+    .slider-txt {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-transform: lowercase;
+      color: $white;
+      font-size: 20px;
+      @media only screen and (max-width: 480px) {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .slider-txt-wrapper-left {
+    right: 66.66666%;
+    .slider-txt {
+      text-align: right;
+      right: 30px;
+      margin-left: 30px;
+    }
+  }
+  .slider-txt-wrapper-right {
+    left: 66.66666%;
+    .slider-txt {
+      text-align: left;
+      left: 30px;
+      margin-right: 30px;
+    }
+  }
+
+  .slider-img-left, .slider-img-right {
+    height: 400px;
+    background-image: url(/images/hero-images/cavallino.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 68vw;
+    position: absolute;
+  }
+
+  .slider-img-left {
+    right: 33.33333%;
+  }
+  .slider-img-right {
+    left: 33.33333%;
+  }
+
 }
 
 #content_area {
