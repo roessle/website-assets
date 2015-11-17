@@ -51,5 +51,6 @@ See [jimdo_layout.html](jimdo-layout.html)
 #### Custom Head
 
 ```
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="http://assets.roessle.eu/css/roessle-bootstrap.css" type="text/css" />
 ```
