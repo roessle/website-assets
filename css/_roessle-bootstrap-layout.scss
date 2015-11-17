@@ -219,6 +219,13 @@
   p, table, td, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #fff;
   }
+
+  @media (max-width: $screen-xs-max) {
+    .cc-m-hgrid-column {
+      float: none;
+      width: auto !important;
+    }
+  }
 }
 
 .footer {
