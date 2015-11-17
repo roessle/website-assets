@@ -182,7 +182,9 @@
 
   .hero-2 {
     height: 400px;
-    background: url("/images/hero-images/cavallino.jpg") no-repeat center center;
+    background-image: url(/images/hero-images/cavallino.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
