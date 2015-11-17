@@ -241,6 +241,14 @@
     a {
       margin: 0 6px;
     }
+
+    @media (max-width: $screen-xs-max) {
+      div.leftrow, div.rightrow {
+        float: none;
+        width: auto !important;
+        text-align: center;
+      }
+    }
   }
 }
 
