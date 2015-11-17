@@ -54,3 +54,18 @@ See [jimdo_layout.html](jimdo-layout.html)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="http://assets.roessle.eu/css/roessle-bootstrap.css" type="text/css" />
 ```
+
+### Use slider
+
+```
+<div class="content-slider">
+    <div class="slider-txt-wrapper-left">
+        <div class="slider-txt">
+            Ferienhaus Schmeienblick
+        </div>
+    </div>
+
+    <div class="slider-img-right">
+    </div>
+</div>
+```
