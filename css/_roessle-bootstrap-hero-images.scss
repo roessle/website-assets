@@ -5,6 +5,7 @@ body {
   $page-start: #page-2323191722;
   $page-hotel: #page-2352764222;
   $page-bilder: #page-2363323122;
+  $page-umgebung: #page-2356901922;
 
   .slider {
     .hero-1-txt::after {
@@ -34,4 +35,16 @@ body {
       background-image: url(/images/hero-images/hopfenzupfenfest1.jpg);
     }
   }
+
+  &#{$page-umgebung} .slider {
+    .hero-1-txt::after {
+      content: "Entdecken Sie die\aUmgebung";
+      white-space: pre;
+    }
+    .hero-2 {
+      background-image: url(/images/hero-images/beetle1.jpg);
+      background-position-y: bottom;
+    }
+  }
+
 }
