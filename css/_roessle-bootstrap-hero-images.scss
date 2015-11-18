@@ -4,12 +4,34 @@ body {
   ///////////////
   $page-start: #page-2323191722;
   $page-hotel: #page-2352764222;
+  $page-bilder: #page-2363323122;
 
-  &#{$page-start} .slider .hero-2 {
-    background-image: url(/images/hero-images/cavallino.jpg);
+  .slider {
+    .hero-1-txt::after {
+      content: "Ein herzliches\aGrüss Gott";
+      white-space: pre;
+    }
   }
 
-  &#{$page-hotel} .slider .hero-2 {
-    background-image: url(/images/hero-images/karin_dani1.jpg);
+  &#{$page-start} .slider {
+    .hero-2 {
+      background-image: url(/images/hero-images/cavallino.jpg);
+    }
+  }
+
+  &#{$page-hotel} .slider {
+    .hero-2 {
+      background-image: url(/images/hero-images/karin_dani1.jpg);
+    }
+  }
+
+  &#{$page-bilder} .slider {
+    .hero-1-txt::after {
+      content: "Ein paar Impressionen\avom Rössle";
+      white-space: pre;
+    }
+    .hero-2 {
+      background-image: url(/images/hero-images/hopfenzupfenfest1.jpg);
+    }
   }
 }
