@@ -6,6 +6,7 @@ body {
   $page-hotel: #page-2352764222;
   $page-bilder: #page-2363323122;
   $page-umgebung: #page-2356901922;
+  $page-jobs: #page-2368762822;
 
   .slider {
     .hero-1-txt::after {
@@ -46,5 +47,16 @@ body {
       background-position-y: bottom;
     }
   }
+
+  &#{$page-jobs} .slider {
+    .hero-1-txt::after {
+      content: "Arbeiten im\aRössle";
+      white-space: pre;
+    }
+    .hero-2 {
+      background-image: url(/images/hero-images/sylvester.jpg);
+    }
+  }
+
 
 }
