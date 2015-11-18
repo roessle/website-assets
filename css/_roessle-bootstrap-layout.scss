@@ -39,7 +39,7 @@
 
           & > a {
             color: #404040;
-            &:hover, &:active {
+            &:hover, &.current {
               color: $maroon;
             }
 
