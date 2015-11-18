@@ -409,6 +409,12 @@ div.hr
 
   .j-gallery {
     margin-bottom: 50px;
+
+    a::after {
+      content: attr(data-title);
+      display: block;
+      text-align: center;
+    }
   }
 }
 
