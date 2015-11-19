@@ -1,6 +1,7 @@
 
 .page-wrapper {
   position: relative;
+  overflow-x: hidden; // Hide X scrollbar (needed for sliders)
 }
 
 .navigation-colors-bar {
@@ -188,33 +189,14 @@
     background-size: cover;
   }
 
-  // [class*="span"] {
-  //   margin:0
-  // }
-  //
-  // .span4 {
-  //   width: 33.33334%
-  // }
-  //
-  // .span8 {
-  //   width: 66.66667%
-  // }
-  //
-  // @media only screen and (min-width: 245px) and (max-width: $screen-xs-max) {
-  //   .span4 {
-  //     float: left;
-  //     width: 40%;
-  //   }
-  //   .span8 {
-  //     float: left;
-  //     width: 60%;
-  //   }
-  // }
-
 }
 
 .content {
   padding-top: 50px;
+
+  #content_area {
+    margin-bottom: 50px;
+  }
 }
 
 .sidebar {
@@ -224,6 +206,11 @@
 
   p, table, td, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #fff;
+  }
+
+  p, table, td
+  {
+    font-size: 14px;
   }
 
   @media (max-width: $screen-xs-max) {
@@ -269,7 +256,7 @@
 body
 {
     font-family: "Alegreya Sans", sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.42857;
     color: #333333;
 }
@@ -277,7 +264,7 @@ body
 p, table, td
 {
     font-family: "Alegreya Sans", sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.42857;
     color: #333333;
 }
@@ -306,14 +293,6 @@ a:hover
 {
     text-decoration: none;
     color: inherit;
-}
-
-div.hr
-{
-    border-bottom-style:dotted;
-    border-bottom-width:1px;
-    border-color: #666666;
-    height: 1px;
 }
 
 .content-slider {
@@ -374,60 +353,4 @@ div.hr
     left: 33.33333%;
   }
 
-}
-
-.page-wrapper {
-  overflow-x: hidden; // Hide X scrollbar (needed for sliders)
-}
-
-#content_area {
-
-  margin-bottom: 50px;
-
-  h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    text-transform: lowercase;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  h1 {
-    a:link, a:visited {
-      text-transform: lowercase;
-      margin-bottom: 50px;
-    }
-  }
-  h2:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    text-transform: lowercase;
-    margin-bottom: 30px;
-  }
-  h2 {
-    a:link, a:visited {
-      text-transform: lowercase;
-      margin-bottom: 30px;
-    }
-  }
-
-  .j-text {
-    margin-bottom: 50px;
-  }
-
-  .j-gallery {
-    margin-bottom: 50px;
-
-    a::after {
-      content: attr(data-title);
-      display: block;
-      text-align: center;
-    }
-  }
-}
-
-%text-font {
-  font-size: 22px !important;
-}
-
-.j-text {
-  @extend %text-font;
-  span {
-    @extend %text-font;
-  }
 }
