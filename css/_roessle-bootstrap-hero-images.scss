@@ -9,7 +9,7 @@ body {
   $page-jobs: #page-2368762822;
   $page-kontakt: #page-2323191922;
   $page-imprint: #page-2323192022;
-  $page-sitemap-privacy: #page-2323191722;
+  // $page-sitemap-privacy: #page-2323191722;
 
   .slider {
     .hero-1-txt::after {
@@ -81,10 +81,10 @@ body {
     }
   }
 
-  &#{$page-sitemap-privacy} .slider {
-    .hero-2 {
-      background-image: url(/images/hero-images/erdbeeren.jpg);
-    }
-  }
+  // &#{$page-sitemap-privacy} .slider {
+  //   .hero-2 {
+  //     background-image: url(/images/hero-images/erdbeeren.jpg);
+  //   }
+  // }
 
 }
