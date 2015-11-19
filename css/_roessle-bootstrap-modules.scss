@@ -44,6 +44,10 @@
     display: block;
     text-align: center;
   }
+  .j-callToAction .j-calltoaction-link {
+    background-color: $maroon;
+    border: none;
+  }
 
   // @media only screen and (max-width: $screen-xs-max) {
   //   .cc-m-gallery-stack .cc-m-gallery-stack-column {
