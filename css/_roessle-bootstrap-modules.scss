@@ -1,7 +1,7 @@
 #content_area {
 
   // Add some default space after modules
-  .j-text, .j-video, .j-gallery {
+  .j-text, .j-video, .j-gallery, .j-callToAction {
     margin-bottom: 50px;
   }
 
@@ -59,6 +59,7 @@
   }
 
   .content-slider {
+    margin-top: 70px;
     margin-bottom: 70px;
   }
 }

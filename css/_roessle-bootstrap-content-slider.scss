@@ -65,5 +65,10 @@
       background-image: url(/images/hero-images/cavallino2.jpg);
     }
   }
+  &.feste {
+    .slider-img {
+      background-image: url(/images/hero-images/bauernstube1.jpg);
+    }
+  }
 
 }
