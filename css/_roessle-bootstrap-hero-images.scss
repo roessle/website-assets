@@ -8,6 +8,7 @@ body {
   $page-umgebung: #page-2356901922;
   $page-jobs: #page-2368762822;
   $page-kontakt: #page-2323191922;
+  $page-sitemap: #page-2323191722;
 
   .slider {
     .hero-1-txt::after {
@@ -66,6 +67,16 @@ body {
     }
     .hero-2 {
       background-image: url(/images/hero-images/herz.jpg);
+    }
+  }
+
+  &#{$page-sitemap} .slider {
+    .hero-1-txt::after {
+      content: "Sitemap";
+      white-space: pre;
+    }
+    .hero-2 {
+      background-image: url(/images/hero-images/erdbeeren.jpg);
     }
   }
 
