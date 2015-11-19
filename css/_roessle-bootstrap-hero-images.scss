@@ -8,7 +8,8 @@ body {
   $page-umgebung: #page-2356901922;
   $page-jobs: #page-2368762822;
   $page-kontakt: #page-2323191922;
-  $page-sitemap: #page-2323191722;
+  $page-imprint: #page-2323192022;
+  $page-sitemap-privacy: #page-2323191722;
 
   .slider {
     .hero-1-txt::after {
@@ -70,11 +71,17 @@ body {
     }
   }
 
-  &#{$page-sitemap} .slider {
+  &#{$page-imprint} .slider {
     .hero-1-txt::after {
-      content: "Sitemap";
+      content: "Impressum";
       white-space: pre;
     }
+    .hero-2 {
+      background-image: url(/images/hero-images/hohenzollern1.jpg);
+    }
+  }
+
+  &#{$page-sitemap-privacy} .slider {
     .hero-2 {
       background-image: url(/images/hero-images/erdbeeren.jpg);
     }
