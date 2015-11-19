@@ -59,13 +59,13 @@ See [jimdo_layout.html](jimdo-layout.html)
 
 ```
 <div class="content-slider">
-    <div class="slider-txt-wrapper-left">
+    <div class="slider-txt-wrapper slider-txt-wrapper-left">
         <div class="slider-txt">
             Ferienhaus Schmeienblick
         </div>
     </div>
 
-    <div class="slider-img-right">
+    <div class="slider-img slider-img-right">
     </div>
 </div>
 ```

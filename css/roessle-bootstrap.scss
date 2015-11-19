@@ -18,6 +18,9 @@ $navbar-default-link-active-bg:            transparent;
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@import "roessle-bootstrap-elements";
 @import "roessle-bootstrap-layout";
 @import "roessle-bootstrap-hero-images";
+@import "roessle-bootstrap-content-slider";
+@import "roessle-bootstrap-modules";
 @import "roessle-bootstrap-cms";

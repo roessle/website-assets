@@ -1,0 +1,76 @@
+#content_area {
+
+  // Add some default space after modules
+  .j-text, .j-video, .j-gallery, .j-callToAction {
+    margin-bottom: 50px;
+  }
+
+  .j-hr {
+    margin-bottom: 30px;
+  }
+
+  h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  h1 {
+    a:link, a:visited {
+      text-transform: lowercase;
+      margin-bottom: 50px;
+    }
+  }
+  h2:not(.cc-within-single-module-element):not(.j-blog-headline) {
+    text-transform: lowercase;
+    margin-bottom: 30px;
+  }
+  h2 {
+    a:link, a:visited {
+      text-transform: lowercase;
+      margin-bottom: 30px;
+    }
+  }
+
+  .j-hr div.hr{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #666666;
+    height: 1px;
+  }
+
+  .j-gallery a::after {
+    // Show title text under images in gallery
+    content: attr(data-title);
+    display: block;
+    text-align: center;
+  }
+
+  // @media only screen and (max-width: $screen-xs-max) {
+  //   .cc-m-gallery-stack .cc-m-gallery-stack-column {
+  //     width: 100% !important;
+  //   }
+  // }
+
+  .j-hgrid {
+    h1:first-child, h2:first-child, h3:first-child {
+      // No top margin for first header in column
+      margin-top: 0px;
+    }
+  }
+
+  .content-slider {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}
+
+// %text-font {
+//   font-size: 22px !important;
+// }
+//
+// .j-text {
+//   @extend %text-font;
+//   span {
+//     @extend %text-font;
+//   }
+// }
