@@ -12,15 +12,6 @@ body {
   ////////////////
   // Page ids
   ///////////////
-  $page-start: #page-2323191722;
-  $page-hotel: #page-2352764222;
-  $page-restaurant: #page-2356899922;
-  $page-bilder: #page-2363323122;
-  $page-umgebung: #page-2356901922;
-  $page-jobs: #page-2368762822;
-  $page-kontakt: #page-2323191922;
-  $page-imprint: #page-2323192022;
-  // $page-sitemap-privacy: #page-2323191722;
 
   .slider {
     .hero-1-txt::after {
@@ -32,19 +23,19 @@ body {
     }
   }
 
-  &#{$page-start} .slider {
+  &.page-home .slider {
     .hero-2 {
       @include hero-responsive-background-image('cavallino');
     }
   }
 
-  &#{$page-hotel} .slider {
+  &.page-hotel .slider {
     .hero-2 {
       @include hero-responsive-background-image('karin_dani1');
     }
   }
 
-  &#{$page-restaurant} .slider {
+  &.page-restaurant .slider {
     .hero-1-txt::after {
       content: "Spitze Tafeln\a...lässt es sich im »Rössle«";
       white-space: pre;
@@ -54,7 +45,7 @@ body {
     }
   }
 
-  &#{$page-bilder} .slider {
+  &.page-bilder .slider {
     .hero-1-txt::after {
       content: "Ein paar Impressionen\avom Rössle";
       white-space: pre;
@@ -64,7 +55,7 @@ body {
     }
   }
 
-  &#{$page-umgebung} .slider {
+  &.page-umgebung .slider {
     .hero-1-txt::after {
       content: "Aufbruch zu Erkundungen";
       white-space: pre;
@@ -75,7 +66,7 @@ body {
     }
   }
 
-  &#{$page-jobs} .slider {
+  &.page-jobs .slider {
     .hero-1-txt::after {
       content: "Arbeiten im\aRössle";
       white-space: pre;
@@ -85,7 +76,7 @@ body {
     }
   }
 
-  &#{$page-kontakt} .slider {
+  &.page-kontakt .slider {
     .hero-1-txt::after {
       content: "Schreiben Sie uns";
       white-space: pre;
@@ -95,7 +86,7 @@ body {
     }
   }
 
-  &#{$page-imprint} .slider {
+  &.page-impresssum .slider {
     .hero-1-txt::after {
       content: "Impressum";
       white-space: pre;
@@ -105,7 +96,7 @@ body {
     }
   }
 
-  // &#{$page-sitemap-privacy} .slider {
+  // &.page-sitemap-privacy} .slider {
   //   .hero-2 {
   //     @include hero-responsive-background-image(/images/hero-images/erdbeeren.jpg);
   //   }
