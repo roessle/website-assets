@@ -101,8 +101,37 @@ module.exports = (grunt) ->
           use: [ mozjpeg() ]
         files: [ {
           expand: true
-          src: [ 'images/hero-images/*.{png,jpg,gif}' ]
-          dest: 'dist/'
+          src: [ 'hero-images/*.{png,jpg,gif}' ]
+          cwd: 'dist/images-responsive/'
+          dest: 'dist/images/'
+        }, {
+          expand: true
+          src: [ 'hero-images/*.{png,jpg,gif}' ]
+          cwd: 'images/'
+          dest: 'dist/images/'
+        }]
+
+    responsive_images:
+      'hero-images':
+        options:
+          engine: 'im'
+          sizes: [
+            {
+              name: 'sm'
+              width: 991
+            },{
+              name: 'md'
+              width: 1199
+            },{
+              name: 'lg'
+              width: 2500
+            }
+          ]
+        files: [ {
+          expand: true
+          src: [ 'hero-images/*.{png,jpg,gif}' ]
+          cwd: 'images/'
+          dest: 'dist/images-responsive/'
         } ]
 
     sass:
@@ -133,7 +162,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build:gurado-example', [ 'newer:copy:gurado-example' ]
   grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
-  grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:imagemin' ]
+  grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:responsive_images', 'newer:imagemin' ]
   grunt.registerTask 'build:html', [ 'compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
   grunt.registerTask 'build', [ 'build:css', 'build:js', 'build:images', 'build:html', 'build:contrib', 'build:gurado-example' ]

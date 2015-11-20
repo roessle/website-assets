@@ -1,3 +1,13 @@
+@mixin hero-responsive-background-image($url) {
+  background-image: url('/images/hero-images/#{$url}-sm.jpg');
+  @media only screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
+    background-image: url('/images/hero-images/#{$url}-md.jpg');
+  }
+  @media only screen and (min-width: $screen-lg) {
+    background-image: url('/images/hero-images/#{$url}-lg.jpg');
+  }
+}
+
 body {
   ////////////////
   // Page ids
@@ -17,17 +27,20 @@ body {
       content: "Ein herzliches\aGrüss Gott";
       white-space: pre;
     }
+    .hero-2 {
+      @include hero-responsive-background-image('cavallino');
+    }
   }
 
   &#{$page-start} .slider {
     .hero-2 {
-      background-image: url(/images/hero-images/cavallino.jpg);
+      @include hero-responsive-background-image('cavallino');
     }
   }
 
   &#{$page-hotel} .slider {
     .hero-2 {
-      background-image: url(/images/hero-images/karin_dani1.jpg);
+      @include hero-responsive-background-image('karin_dani1');
     }
   }
 
@@ -37,7 +50,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/ente1.jpg);
+      @include hero-responsive-background-image('ente1');
     }
   }
 
@@ -47,7 +60,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/hopfenzupfenfest1.jpg);
+      @include hero-responsive-background-image('hopfenzupfenfest1');
     }
   }
 
@@ -57,7 +70,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/beetle1.jpg);
+      @include hero-responsive-background-image('beetle1');
       background-position-y: bottom;
     }
   }
@@ -68,7 +81,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/sylvester.jpg);
+      @include hero-responsive-background-image('sylvester');
     }
   }
 
@@ -78,7 +91,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/herz.jpg);
+      @include hero-responsive-background-image('herz');
     }
   }
 
@@ -88,13 +101,13 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/hohenzollern1.jpg);
+      @include hero-responsive-background-image('hohenzollern1');
     }
   }
 
   // &#{$page-sitemap-privacy} .slider {
   //   .hero-2 {
-  //     background-image: url(/images/hero-images/erdbeeren.jpg);
+  //     @include hero-responsive-background-image(/images/hero-images/erdbeeren.jpg);
   //   }
   // }
 
