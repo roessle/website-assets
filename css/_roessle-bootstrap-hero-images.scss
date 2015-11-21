@@ -1,100 +1,118 @@
+@mixin hero-responsive-background-image($url) {
+  background-image: url('/images/hero-images/#{$url}-sm.jpg');
+  @media only screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
+    background-image: url('/images/hero-images/#{$url}-md.jpg');
+  }
+  @media only screen and (min-width: $screen-lg) {
+    background-image: url('/images/hero-images/#{$url}-lg.jpg');
+  }
+}
+
 body {
   ////////////////
   // Page ids
   ///////////////
-  $page-start: #page-2323191722;
-  $page-hotel: #page-2352764222;
-  $page-restaurant: #page-2356899922;
-  $page-bilder: #page-2363323122;
-  $page-umgebung: #page-2356901922;
-  $page-jobs: #page-2368762822;
-  $page-kontakt: #page-2323191922;
-  $page-imprint: #page-2323192022;
-  // $page-sitemap-privacy: #page-2323191722;
 
   .slider {
     .hero-1-txt::after {
       content: "Ein herzliches\aGrüss Gott";
       white-space: pre;
     }
-  }
-
-  &#{$page-start} .slider {
     .hero-2 {
-      background-image: url(/images/hero-images/cavallino.jpg);
+      @include hero-responsive-background-image('cavallino');
     }
   }
 
-  &#{$page-hotel} .slider {
+  &.page-home .slider {
     .hero-2 {
-      background-image: url(/images/hero-images/karin_dani1.jpg);
+      @include hero-responsive-background-image('cavallino');
     }
   }
 
-  &#{$page-restaurant} .slider {
+  &.page-hotel .slider {
+    .hero-2 {
+      @include hero-responsive-background-image('karin_dani1');
+    }
+  }
+
+  &.page-restaurant .slider {
     .hero-1-txt::after {
       content: "Spitze Tafeln\a...lässt es sich im »Rössle«";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/ente1.jpg);
+      @include hero-responsive-background-image('ente1');
     }
   }
 
-  &#{$page-bilder} .slider {
+  &.page-aktuell .slider {
     .hero-1-txt::after {
-      content: "Ein paar Impressionen\avom Rössle";
+      content: "Neuigkeiten\avom »Rössle«";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/hopfenzupfenfest1.jpg);
+      @include hero-responsive-background-image('roessle1');
+      background-position-y: top;
+      @media only screen and (min-width: $screen-lg) {
+        background-position-y: 20%;
+      }
     }
   }
 
-  &#{$page-umgebung} .slider {
+  &.page-bilder .slider {
+    .hero-1-txt::after {
+      content: "Impressionen\avom »Rössle«";
+      white-space: pre;
+    }
+    .hero-2 {
+      @include hero-responsive-background-image('hopfenzupfenfest1');
+    }
+  }
+
+  &.page-umgebung .slider {
     .hero-1-txt::after {
       content: "Aufbruch zu Erkundungen";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/beetle1.jpg);
+      @include hero-responsive-background-image('beetle1');
       background-position-y: bottom;
     }
   }
 
-  &#{$page-jobs} .slider {
+  &.page-jobs .slider {
     .hero-1-txt::after {
-      content: "Arbeiten im\aRössle";
+      content: "Arbeiten im\a»Rössle«";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/sylvester.jpg);
+      @include hero-responsive-background-image('sylvester');
     }
   }
 
-  &#{$page-kontakt} .slider {
+  &.page-kontakt .slider {
     .hero-1-txt::after {
       content: "Schreiben Sie uns";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/herz.jpg);
+      @include hero-responsive-background-image('herz');
     }
   }
 
-  &#{$page-imprint} .slider {
+  &.page-impresssum .slider {
     .hero-1-txt::after {
       content: "Impressum";
       white-space: pre;
     }
     .hero-2 {
-      background-image: url(/images/hero-images/hohenzollern1.jpg);
+      @include hero-responsive-background-image('hohenzollern1');
     }
   }
 
-  // &#{$page-sitemap-privacy} .slider {
+  // &.page-sitemap-privacy} .slider {
   //   .hero-2 {
-  //     background-image: url(/images/hero-images/erdbeeren.jpg);
+  //     @include hero-responsive-background-image(/images/hero-images/erdbeeren.jpg);
   //   }
   // }
 
