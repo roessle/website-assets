@@ -165,6 +165,19 @@
     height: 400px;
     background-color: $maroon;
 
+    @media only screen and (max-width: $screen-xs-max) {
+       height: 200px;
+    }
+
+    @media only screen and (max-width: 480px) {
+       height: 100px;
+      //  position: absolute;
+      //  width: 100%;
+      //  z-index: 3;
+      //  background-color: rgba(157,5,37,0.9);
+    }
+
+
     .hero-1-txt {
       position: relative;
       top: 50%;
