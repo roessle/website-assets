@@ -160,7 +160,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build:gurado-example', [ 'newer:copy:gurado-example' ]
-  grunt.registerTask 'build:css', [ 'newer:sass', 'newer:autoprefixer', 'newer:copy:css' ]
+  grunt.registerTask 'build:css', [ 'sass', 'newer:autoprefixer', 'newer:copy:css' ]
   grunt.registerTask 'build:js', [ 'newer:coffee' ]
   grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:responsive_images', 'newer:imagemin' ]
   grunt.registerTask 'build:html', [ 'compile-handlebars' ]
