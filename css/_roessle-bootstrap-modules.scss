@@ -9,24 +9,12 @@
     margin-bottom: 30px;
   }
 
-  h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    text-transform: lowercase;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  h1 {
-    a:link, a:visited {
-      text-transform: lowercase;
+  .j-header {
+    h1 {
+      text-align: center;
       margin-bottom: 50px;
     }
-  }
-  h2:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    text-transform: lowercase;
-    margin-bottom: 30px;
-  }
-  h2 {
-    a:link, a:visited {
-      text-transform: lowercase;
+    h2 {
       margin-bottom: 30px;
     }
   }
