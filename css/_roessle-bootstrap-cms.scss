@@ -1,4 +1,4 @@
-body[style*="background-position"] {
+html:not(.j-feature-csstransitions) {
   @media (min-width: 768px) {
     .container {
         width: 750px - 185px;
@@ -13,9 +13,6 @@ body[style*="background-position"] {
     .container {
         width: 1170px - 185px;
     }
-  }
-  .cc-inner {
-    padding-right: 185px;
   }
 }
 
