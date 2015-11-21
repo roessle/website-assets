@@ -45,6 +45,20 @@ body {
     }
   }
 
+  &.page-aktuell .slider {
+    .hero-1-txt::after {
+      content: "Neuigkeiten\avom »Rössle«";
+      white-space: pre;
+    }
+    .hero-2 {
+      @include hero-responsive-background-image('roessle1');
+      background-position-y: top;
+      @media only screen and (min-width: $screen-lg) {
+        background-position-y: 20%;
+      }
+    }
+  }
+
   &.page-bilder .slider {
     .hero-1-txt::after {
       content: "Impressionen\avom »Rössle«";
