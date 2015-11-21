@@ -30,6 +30,10 @@ body {
   }
 
   &.page-hotel .slider {
+    .hero-1-txt::after {
+      content: "Rundum\awohlfühlen";
+      white-space: pre;
+    }
     .hero-2 {
       @include hero-responsive-background-image('karin_dani1');
     }
