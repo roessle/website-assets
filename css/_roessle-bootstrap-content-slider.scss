@@ -13,7 +13,6 @@
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      text-transform: lowercase;
       color: $white;
       font-size: 20px;
       @media only screen and (max-width: 480px) {
@@ -68,6 +67,11 @@
   &.feste {
     .slider-img {
       background-image: url(/images/hero-images/bauernstube1.jpg);
+    }
+  }
+  &.schmeienblick {
+    .slider-img {
+      background-image: url(/images/hero-images/pferd1.jpg);
     }
   }
 
