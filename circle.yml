@@ -10,12 +10,12 @@ machine:
 dependencies:
   override:
     - npm install
-    - bower install
+    - npm run bower install
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
 
 test:
   override:
-    - grunt build
+    - npm run grunt build
 
 deployment:
   production:
@@ -23,4 +23,4 @@ deployment:
     commands:
       - git config --global user.email "circleci@roessle.eu"
       - git config --global user.name "Roessle CircleCI"
-      - grunt gh-pages:ci
+      - npm run grunt gh-pages:ci
