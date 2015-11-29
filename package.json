@@ -23,8 +23,11 @@
     "grunt-http-server": "~1.10.0",
     "grunt-newer": "~1.1.1",
     "grunt-responsive-images": "^0.1.7",
+    "grunt-webpack": "^1.0.11",
     "imagemin-mozjpeg": "~5.1.0",
-    "load-grunt-tasks": "~3.2.0"
+    "load-grunt-tasks": "~3.2.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,11 +1,6 @@
-general:
-  branches:
-    ignore:
-      - gh-pages
-
 machine:
   node:
-    version: 0.12
+    version: 4.1.0
 
 dependencies:
   override:
