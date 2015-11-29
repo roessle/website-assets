@@ -3,6 +3,9 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   mozjpeg = require('imagemin-mozjpeg')
 
+  webpack = require('webpack')
+  webpackConfig = require('./webpack.config.js')
+
   grunt.initConfig
 
     autoprefixer:
@@ -59,7 +62,6 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          'dist/js/roessle.js': 'js/roessle.coffee'
           'dist/js/gurado.js': 'js/gurado.coffee'
 
     'gh-pages':
@@ -144,6 +146,10 @@ module.exports = (grunt) ->
           'dist/css/gurado-sass.css': 'css/gurado.scss'
           'dist/css/roessle-bootstrap-sass.css': 'css/roessle-bootstrap.scss'
 
+    webpack:
+      options: webpackConfig
+      build: {}
+
     watch:
       css:
         files: [ 'css/**/*.scss' ]
@@ -161,7 +167,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [ 'build' ]
   grunt.registerTask 'build:gurado-example', [ 'newer:copy:gurado-example' ]
   grunt.registerTask 'build:css', [ 'sass', 'newer:autoprefixer', 'newer:copy:css' ]
-  grunt.registerTask 'build:js', [ 'newer:coffee' ]
+  grunt.registerTask 'build:js', [ 'newer:coffee', 'webpack:build' ]
   grunt.registerTask 'build:images', [ 'newer:copy:images-backgrounds', 'newer:copy:logos', 'newer:copy:favicons', 'newer:responsive_images', 'newer:imagemin' ]
   grunt.registerTask 'build:html', [ 'compile-handlebars' ]
   grunt.registerTask 'build:contrib', [ 'newer:copy:contrib' ]
