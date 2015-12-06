@@ -115,8 +115,15 @@
     .row {
       float: none;
     }
-    ul li {
-      width: 33%;
+    ul {
+      padding: 0px;
+      li {
+        width: 33%;
+        text-align: center;
+        a {
+          padding: 0px;
+        }
+      }
     }
   }
 }
