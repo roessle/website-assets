@@ -69,10 +69,7 @@
   background-size: 50% 1px;
   background-position: bottom right;
   background-repeat: no-repeat;
-  @media only screen and (min-width: 480px) and (max-width: $screen-xs-max) {
-    background-size: 70% 1px;
-  }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: $screen-xs-max) {
     background: none;
     background-size: 100% 1px;
     border-bottom: 1px solid $white;
@@ -111,7 +108,7 @@
     }
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: $screen-xs-max) {
     .row {
       float: none;
     }
@@ -131,10 +128,9 @@
 .logo-roessle {
   position: absolute;
   bottom: 60px;
-  // left: 20px;
 
-  @media only screen and (max-width: 480px) {
-    display: none;
+  @media only screen and (max-width: $screen-xs-max) {
+    top: 0px;
   }
 
   .logo-hotel-gasthof {
@@ -149,6 +145,10 @@
     line-height: 17px;
     letter-spacing: 1px;
     word-spacing: 4px;
+
+    @media only screen and (max-width: $screen-xs-max) {
+      display: none;
+    }
   }
 
   .logo-stamp-roessle {
@@ -158,7 +158,13 @@
     background: url(/images/logos/stamp_roessle.png);
     margin-top: -10px;
     margin-left: 16px;
-    text-indent: -9999px
+    text-indent: -9999px;
+
+    @media only screen and (max-width: $screen-xs-max) {
+      background: url(/images/logos/stamp_hotel_gasthof_roessle-h100.png);
+      height: 100px;
+      width: 197px;
+    }
   }
 }
 
