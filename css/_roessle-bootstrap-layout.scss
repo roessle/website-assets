@@ -48,10 +48,14 @@
             position: relative;
             display: block;
 
-            padding: 10px 15px;
+            padding: 10px 8px;
             @media (min-width: $screen-sm-min) {
               padding-top: 44px;
               padding-bottom: 44px;
+            }
+            @media (min-width: $screen-md-min) {
+              padding-left: 15px;
+              padding-right: 15px;
             }
           }
       }
