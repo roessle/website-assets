@@ -25,7 +25,7 @@ body {
 
   &.page-home .slider {
     .hero-2 {
-      @include hero-responsive-background-image('cavallino');
+      @include hero-responsive-background-image('herz');
     }
   }
 
@@ -35,7 +35,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      @include hero-responsive-background-image('karin_dani1');
+      @include hero-responsive-background-image('zimmer1');
     }
   }
 
@@ -45,21 +45,17 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      @include hero-responsive-background-image('ente1');
+      @include hero-responsive-background-image('restaurant1');
     }
   }
 
   &.page-aktuell .slider {
     .hero-1-txt::after {
-      content: "Neuigkeiten\avom »Rössle«";
+      content: "Aktuelles\avom »Rössle«";
       white-space: pre;
     }
     .hero-2 {
-      @include hero-responsive-background-image('roessle1');
-      background-position-y: top;
-      @media only screen and (min-width: $screen-lg) {
-        background-position-y: 20%;
-      }
+      @include hero-responsive-background-image('uhr1');
     }
   }
 
@@ -79,8 +75,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      @include hero-responsive-background-image('beetle1');
-      background-position-y: bottom;
+      @include hero-responsive-background-image('umgebung1');
     }
   }
 
