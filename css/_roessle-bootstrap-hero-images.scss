@@ -79,8 +79,7 @@ body {
       white-space: pre;
     }
     .hero-2 {
-      @include hero-responsive-background-image('beetle1');
-      background-position-y: bottom;
+      @include hero-responsive-background-image('umgebung1');
     }
   }
 
