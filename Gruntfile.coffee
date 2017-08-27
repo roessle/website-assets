@@ -15,6 +15,7 @@ module.exports = (grunt) ->
           map: true
         files:
           'dist/css/roessle-prefixed.css': ['dist/css/roessle-sass.css']
+          'dist/css/dirs21-prefixed.css': ['dist/css/dirs21-sass.css']
           'dist/css/gurado-prefixed.css': ['dist/css/gurado-sass.css']
           'dist/css/roessle-bootstrap-prefixed.css': ['dist/css/roessle-bootstrap-sass.css']
 
@@ -51,6 +52,7 @@ module.exports = (grunt) ->
       css:
         files:
           'dist/css/roessle.css': ['dist/css/roessle-prefixed.css']
+          'dist/css/dirs21.css': ['dist/css/dirs21-prefixed.css']
           'dist/css/gurado.css': ['dist/css/gurado-prefixed.css']
           'dist/css/roessle-bootstrap.css': ['dist/css/roessle-bootstrap-prefixed.css']
       'gurado-example':
@@ -143,6 +145,7 @@ module.exports = (grunt) ->
           bundleExec: true
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
+          'dist/css/dirs21-sass.css': 'css/dirs21.scss'
           'dist/css/gurado-sass.css': 'css/gurado.scss'
           'dist/css/roessle-bootstrap-sass.css': 'css/roessle-bootstrap.scss'
 
