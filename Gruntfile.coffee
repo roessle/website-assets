@@ -142,7 +142,7 @@ module.exports = (grunt) ->
       dist:
         options:
           style: 'expanded'
-          bundleExec: true
+          bundleExec: false
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
           'dist/css/dirs21-sass.css': 'css/dirs21.scss'
