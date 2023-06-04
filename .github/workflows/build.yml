@@ -38,4 +38,9 @@ jobs:
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: |
+          # Setup SSH Keys and known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY_WEBSITE_ASSETS_DEPLOYMENT }}"
           yarn run deploy
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
