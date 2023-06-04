@@ -69,11 +69,14 @@ module.exports = (grunt) ->
     'gh-pages':
       options:
         base: 'dist'
+        user:
+          name: "Github actions"
+          email: "41898282+github-actions[bot]@users.noreply.github.com"
       src: [ '**' ]
       ci:
         options:
-          repo: 'https://' + process.env.GH_TOKEN + '@github.com/roessle/website-assets-deployment.git'
-          silent: true
+          repo: 'git@github.com:roessle/website-assets-deployment.git'
+          silent: false
         src: [ '**' ]
 
     'compile-handlebars':
@@ -142,7 +145,7 @@ module.exports = (grunt) ->
       dist:
         options:
           style: 'expanded'
-          bundleExec: true
+          bundleExec: false
         files:
           'dist/css/roessle-sass.css': 'css/roessle.scss'
           'dist/css/dirs21-sass.css': 'css/dirs21.scss'

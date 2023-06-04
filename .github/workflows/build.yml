@@ -1,0 +1,46 @@
+name: build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+      - name: Configure packages
+        run: |
+          sudo add-apt-repository ppa:linuxuprising/libpng12
+          sudo apt-get -yq update
+          sudo apt-get -yq install curl imagemagick autoconf gifsicle gcc make gawk nasm libpng12-0
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+          yarn run bower install
+      - name: Build
+        run: |
+          yarn build
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: |
+            dist
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Setup SSH Keys and known_hosts
+          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY_WEBSITE_ASSETS_DEPLOYMENT }}"
+          yarn run deploy
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
