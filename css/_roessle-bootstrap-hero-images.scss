@@ -18,6 +18,16 @@ body {
       content: "Ein herzliches\aGrüss Gott";
       white-space: pre;
     }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "A warm greeting";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Un grand bonjour";
+      }
+    }
     .hero-2 {
       @include hero-responsive-background-image('cavallino');
     }
@@ -34,6 +44,16 @@ body {
       content: "Rundum\awohlfühlen";
       white-space: pre;
     }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Feel good\aall round";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Se sentir bien\atout autour";
+      }
+    }
     .hero-2 {
       @include hero-responsive-background-image('zimmer1');
     }
@@ -43,6 +63,16 @@ body {
     .hero-1-txt::after {
       content: "Spitze Tafeln\a...lässt es sich im »Rössle«";
       white-space: pre;
+    }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "A great meal\a...at the »Rössle«";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Manger au mieux\a...au »Rössle«";
+      }
     }
     .hero-2 {
       @include hero-responsive-background-image('restaurant1');
@@ -54,6 +84,16 @@ body {
       content: "Aktuelles\avom »Rössle«";
       white-space: pre;
     }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "News\afrom the »Rössle«";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Actualités\adu »Rössle«";
+      }
+    }
     .hero-2 {
       @include hero-responsive-background-image('uhr1');
     }
@@ -63,6 +103,16 @@ body {
     .hero-1-txt::after {
       content: "Impressionen\avom »Rössle«";
       white-space: pre;
+    }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Impressions\aof the »Rössle«";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Impressions\adu »Rössle«";
+      }
     }
     .hero-2 {
       @include hero-responsive-background-image('hopfenzupfenfest1');
@@ -74,6 +124,16 @@ body {
       content: "Aufbruch zu Erkundungen";
       white-space: pre;
     }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Setting out to explore";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Départ pour l'exploration";
+      }
+    }
     .hero-2 {
       @include hero-responsive-background-image('umgebung1');
     }
@@ -83,6 +143,16 @@ body {
     .hero-1-txt::after {
       content: "Arbeiten im\a»Rössle«";
       white-space: pre;
+    }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Working at the\aRössle";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Travailler dans le\aRössle";
+      }
     }
     .hero-2 {
       @include hero-responsive-background-image('sylvester');
@@ -94,6 +164,16 @@ body {
       content: "Schreiben Sie uns";
       white-space: pre;
     }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Write us";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Écrivez-nous";
+      }
+    }
     .hero-2 {
       @include hero-responsive-background-image('herz');
     }
@@ -103,6 +183,16 @@ body {
     .hero-1-txt::after {
       content: "Impressum";
       white-space: pre;
+    }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Imprint";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Mentions légales";
+      }
     }
     .hero-2 {
       @include hero-responsive-background-image('hohenzollern1');

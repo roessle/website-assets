@@ -7,25 +7,24 @@ Assets for [roessle-stetten.jmdo.com](http://roessle-stetten.jmdo.com) / [roessl
 ## Requirements
 
 * Node.js
-* npm
-* Grunt
+* yarn
 
 ## Install the dependencies
 
 ```shell
-npm install
+yarn
 ```
 
 ## Building the project
 
 ```shell
-grunt build
+yarn run grunt build
 ```
 
 ## Starting the local HTTP server
 
 ```shell
-grunt dev
+yarn run grunt dev
 ```
 
 ### Loading assets from the local HTTP server
