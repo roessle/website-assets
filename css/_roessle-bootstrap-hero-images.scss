@@ -79,6 +79,26 @@ body {
     }
   }
 
+  &.page-buchen .slider {
+    .hero-1-txt::after {
+      content: "Übernachtung\a buchen";
+      white-space: pre;
+    }
+    &:lang(en) {
+      .hero-1-txt::after {
+        content: "Book your\a stay";
+      }
+    }
+    &:lang(fr) {
+      .hero-1-txt::after {
+        content: "Réserver\a une nuitée";
+      }
+    }
+    .hero-2 {
+      @include hero-responsive-background-image('bett');
+    }
+  }
+
   &.page-aktuell .slider {
     .hero-1-txt::after {
       content: "Aktuelles\avom »Rössle«";
