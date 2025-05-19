@@ -4,7 +4,7 @@
   "description": "Website assets for roessle.eu",
   "main": "index.js",
   "dependencies": {
-    "grunt": "~1.4.1",
+    "grunt": "~1.5.3",
     "grunt-jekyll": "~0.4.2",
     "metalsmith": "~2.0.1"
   },
@@ -28,7 +28,7 @@
     "load-grunt-tasks": "~3.2.0",
     "sass": "^1.89.0",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
