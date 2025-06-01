@@ -4,7 +4,7 @@
   "description": "Website assets for roessle.eu",
   "main": "index.js",
   "dependencies": {
-    "grunt": "~1.4.1",
+    "grunt": "~1.6.1",
     "grunt-jekyll": "~0.4.2",
     "metalsmith": "~2.0.1"
   },
