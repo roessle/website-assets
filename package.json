@@ -35,7 +35,8 @@
     "bower": "bower",
     "grunt": "grunt",
     "build": "grunt build",
-    "deploy": "grunt gh-pages:ci"
+    "deploy": "grunt gh-pages:ci",
+    "diff": "grunt gh-pages:diff"
   },
   "repository": {
     "type": "git",

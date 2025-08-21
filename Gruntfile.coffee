@@ -78,6 +78,11 @@ module.exports = (grunt) ->
           repo: 'git@github.com:roessle/website-assets-deployment.git'
           silent: false
         src: [ '**' ]
+      diff:
+        options:
+          repo: 'git@github.com:roessle/website-assets-deployment.git'
+          push: false
+        src: [ '**' ]
 
     'compile-handlebars':
       html:
